@@ -5,7 +5,11 @@ class Zombie
     @@max_strength=8
     @@default_speed=1
     @@default_strength=3
+    @speed
+    @strength
 
+    attr_accessor :speed, :strength
+    
 def initialize(speed,strength)
     if speed > @@max_speed
         speed = @@default_speed
@@ -18,12 +22,25 @@ def initialize(speed,strength)
 end
 
 def encounter
+    encountered_zombie=@@horde.sample
+    puts "Zombie encountered!"
+    prints "He's ugly: #{encountered_zombie}"
+    outrun_zombie(encountered_zombie)
 end
 
-def outrun_zombie?
+def outrun_zombie?(encountered_zombie)
+    your_speed = rand(@@max_speed)
+    zombie_speed = encountered_zombie.speed
+    if your_speed > zombie_speed
+        puts "You have escaped!"
+        return true
+    elsif survive_attack?(encountered_zombie)
 end
 
 def survive_attack?
+    your_strength = rand(@@max_strength)
+    zombie_strength = Zombie.strength
+    if your_strength>
 end
 
 def self.all
