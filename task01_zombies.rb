@@ -9,7 +9,10 @@ class Zombie
     @strength
 
     attr_accessor :speed, :strength
-    
+
+def run_game
+end
+
 def initialize(speed,strength)
     if speed > @@max_speed
         speed = @@default_speed
@@ -35,12 +38,21 @@ def outrun_zombie?(encountered_zombie)
         puts "You have escaped!"
         return true
     elsif survive_attack?(encountered_zombie)
+        puts "He is faster than you. Fight for your life!"
+        return false
 end
 
 def survive_attack?
     your_strength = rand(@@max_strength)
-    zombie_strength = Zombie.strength
-    if your_strength>
+    zombie_strength = encountered_zombie.strength
+    if your_strength> encountered_zombie.strength
+        puts "You have fought him off!"
+        return true
+        elsif
+            "He's stronger than you. Welcome to the Zombie life!"
+            return false
+        end
+
 end
 
 def self.all
@@ -82,3 +94,7 @@ end
 
 
 end
+
+puts "\e[H\e[2J"
+a_zombie_app=game.new("Zombie Game")
+a_zombie_app_app.main_menu
