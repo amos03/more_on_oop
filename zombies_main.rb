@@ -1,22 +1,9 @@
 require_relative "task01_zombies"
 
-class Main
+Zombie1 = Zombie.new(6,9)
 
-@name=nil
+Zombie1.encounter
 
-    def initialize(Zombies)
-        @name=name
-    end
-
-class Game
-    def run_game
-        p Zombie.all
-        Zombie.new_day
-        p Zombie.all
-        Zombie.encounter
-end
+Zombie.new_day
 
 
-puts "\e[H\e[2J"
-a_zombie_app=game.new("Zombie Game")
-a_zombie_app_app.run_game
