@@ -36,3 +36,9 @@ cristina = Student.new("Cristina")
 cristina.greeting
 chris.teach
 cristina.learn
+
+# cristina.teach 
+# leads to "undefined method `teach' for #<Student:0x0000557fd42c2f28 @name="Cristina"> (NoMethodError)"
+
+# chris.learn
+# leads to "undefined method `learn' for #<Instructor:0x000055e158236790 @name="Chris"> (NoMethodError)"
